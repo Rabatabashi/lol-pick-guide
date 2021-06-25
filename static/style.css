@@ -1,7 +1,8 @@
 body{
+    font-size: 12px;
     display: grid;
     grid-template-rows: 70% 30%;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 55em auto;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -18,6 +19,35 @@ body{
     grid-area: 1 / 1 / 2 / 2;
     border-top: 8px ridge rgb(49, 49, 49);
     border-left: 8px ridge rgb(49, 49, 49);
+    display: grid;
+    grid-template-columns: 2em 8em 2em 8em auto 8em 2em 8em 2em;    
+}
+
+#champion-select h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.selected-champions {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+#our-bans {
+    grid-column: 2 / 3;
+}
+
+#our-picks {
+    grid-column: 4 / 5;
+}
+
+#their-picks {
+    grid-column: 6 / 7;
+}
+
+#their-bans {
+    grid-column: 8 / 9;
 }
 
 #champions-list{
@@ -32,4 +62,13 @@ body{
     border-bottom: 8px ridge rgb(49, 49, 49);
     border-left: 8px ridge rgb(49, 49, 49);
     border-top: 8px ridge rgb(49, 49, 49);
+}
+
+.image {
+    width: 8em;
+    height: 8em;
+    border: 3px solid rgb(49, 49, 49);
+    background-image: url('/static/img/champ-icons/AatroxSquare.png');
+    background-size: contain;
+    cursor: pointer;
 }
